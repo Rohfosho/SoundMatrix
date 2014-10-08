@@ -52,13 +52,14 @@ public class Main extends JApplet implements Runnable
 				    protected Color getSelectColor() {
 				    	
 				    	float[] hsbvals = new float[3];
-						Color.RGBtoHSB(250,107,102, hsbvals);
+						Color.RGBtoHSB(192, 57, 43, hsbvals);
 				        return Color.getHSBColor(hsbvals[0], hsbvals[1], hsbvals[2]);
 				    }
 				});
-				button[x][y].setBackground(Color.LIGHT_GRAY);
-				float[] hsbvals = new float[3];				
-				Color.RGBtoHSB(38,134,199, hsbvals);
+				float[] hsbvals = new float[3];
+				Color.RGBtoHSB(44, 62, 80, hsbvals);
+				button[x][y].setBackground(Color.getHSBColor(hsbvals[0], hsbvals[1], hsbvals[2]));
+				Color.RGBtoHSB(52, 152, 219, hsbvals);
 				Border border = BorderFactory.createLineBorder(Color.getHSBColor(hsbvals[0], hsbvals[1], hsbvals[2]));
 				button[x][y].setBorder(border);
 				panel.add(button[x][y]);
